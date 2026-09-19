@@ -1,0 +1,23 @@
+{
+  "name": "Quant Bot Dashboard",
+  "short_name": "QuantBot",
+  "description": "High-Signal Quantitative Stock Tracking Dashboard",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e1e1e",
+  "theme_color": "#36A2EB",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

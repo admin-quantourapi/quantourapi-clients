@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDirs": [".", "./.react-router/types"],
+    "paths": {
+      "app/*": ["./app/*"]
+    },
+    "strictFunctionTypes": false
+  },
+  "include": [
+    "app/**/*",
+    "scripts/**/*",
+    ".react-router/types/**/*",
+    "*.ts",
+    "*.tsx"
+  ]
+}

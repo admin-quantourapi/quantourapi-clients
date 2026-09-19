@@ -1,0 +1,334 @@
+@theme {
+  /* Core Palette (Solid colors for maximum accessibility) */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-accent: var(--accent);
+  --color-special: var(--special);
+  --color-on-special: var(--on-special);
+  --color-down: var(--down);
+  --color-on-down: var(--on-down);
+  --color-up: var(--up);
+  --color-on-up: var(--on-up);
+  --color-muted: var(--muted);
+  --color-on-muted: var(--on-muted);
+  --color-success: var(--success);
+  --color-on-success: var(--on-success);
+  --color-warning: var(--warning);
+  --color-on-warning: var(--on-warning);
+  --color-danger: var(--danger);
+  --color-on-danger: var(--on-danger);
+  --color-info: var(--info);
+  --color-on-info: var(--on-info);
+
+  /* "On" Colors (Text/Icon on top of surfaces) */
+  --color-on-primary: var(--on-primary);
+  --color-on-secondary: var(--on-secondary);
+  --color-on-tertiary: var(--on-tertiary);
+  --color-on-accent: var(--on-accent);
+
+  /* Surface Layers (Ensuring high readability and correct contrast levels) */
+  --color-surface-base: var(--surface-base);
+  --color-on-surface-base: var(--on-surface-base);
+  --color-surface-base-border: var(--border-surface-base);
+
+  --color-surface-elevated: var(--surface-elevated);
+  --color-on-surface-elevated: var(--on-surface-elevated);
+  --color-surface-elevated-border: var(--border-surface-elevated);
+
+  --color-surface-sink: var(--surface-sink);
+  --color-on-surface-sink: var(--on-surface-sink);
+  --color-surface-sink-border: var(--border-surface-sink);
+
+  /* Backwards-compatibility aliases */
+  --color-bg-default: var(--surface-base);
+  --color-text-default: var(--on-surface-base);
+  --color-background: var(--surface-base);
+  --color-foreground: var(--on-surface-base);
+  --color-card: var(--surface-elevated);
+  --color-on-card: var(--on-surface-elevated);
+  --color-border-0: var(--border-surface-base);
+  --color-border-1: var(--border-surface-elevated);
+  --color-border-2: var(--border-surface-sink);
+  --color-surface-0: var(--surface-base);
+  --color-on-surface-0: var(--on-surface-base);
+  --color-surface-1: var(--surface-elevated);
+  --color-on-surface-1: var(--on-surface-elevated);
+  --color-surface-2: var(--surface-sink);
+  --color-on-surface-2: var(--on-surface-sink);
+
+  /* Semantic Font Sizes (micro-level text) */
+  --text-micro: 0.5625rem;
+}
+
+@layer base {
+  :root {
+    /* =============================================
+       Per-Surface Palette Variables (13 roles × 3)
+       ============================================= */
+
+    /* Base surface */
+    /* Base surface */
+    --surface-base-primary: #0284c7;
+    --surface-base-on-primary: #ffffff;
+    --surface-base-secondary: #854d0e;
+    --surface-base-on-secondary: #ffffff;
+    --surface-base-accent: #0284c7;
+    --surface-base-on-accent: #ffffff;
+    --surface-base-special: #475569;
+    --surface-base-on-special: #ffffff;
+    --surface-base-down: #b91c1c;
+    --surface-base-on-down: #ffffff;
+    --surface-base-up: #047857;
+    --surface-base-on-up: #ffffff;
+    --surface-base-success: #047857;
+    --surface-base-warning: #f59e0b;
+    --surface-base-danger: #b91c1c;
+    --surface-base-info: #2563eb;
+
+    /* Elevated surface (same defaults as base) */
+    --surface-elevated-primary: #0284c7;
+    --surface-elevated-on-primary: #ffffff;
+    --surface-elevated-secondary: #854d0e;
+    --surface-elevated-on-secondary: #ffffff;
+    --surface-elevated-accent: #0284c7;
+    --surface-elevated-on-accent: #ffffff;
+    --surface-elevated-special: #475569;
+    --surface-elevated-on-special: #ffffff;
+    --surface-elevated-down: #b91c1c;
+    --surface-elevated-on-down: #ffffff;
+    --surface-elevated-up: #047857;
+    --surface-elevated-on-up: #ffffff;
+    --surface-elevated-success: #047857;
+    --surface-elevated-warning: #f59e0b;
+    --surface-elevated-danger: #b91c1c;
+    --surface-elevated-info: #2563eb;
+
+    /* Sink surface (same defaults as base) */
+    --surface-sink-primary: #0284c7;
+    --surface-sink-on-primary: #ffffff;
+    --surface-sink-secondary: #854d0e;
+    --surface-sink-on-secondary: #ffffff;
+    --surface-sink-accent: #0284c7;
+    --surface-sink-on-accent: #ffffff;
+    --surface-sink-special: #475569;
+    --surface-sink-on-special: #ffffff;
+    --surface-sink-down: #b91c1c;
+    --surface-sink-on-down: #ffffff;
+    --surface-sink-up: #047857;
+    --surface-sink-on-up: #ffffff;
+    --surface-sink-success: #047857;
+    --surface-sink-warning: #f59e0b;
+    --surface-sink-danger: #b91c1c;
+    --surface-sink-info: #2563eb;
+
+    /* Surface structural vars (global — choose which surface) */
+    --surface-base: #f8fafc;
+    --on-surface-base: #0f172a;
+    --border-surface-base: #e2e8f0;
+    --surface-elevated: #ffffff;
+    --on-surface-elevated: #0f172a;
+    --border-surface-elevated: #cbd5e1;
+    --surface-sink: #f1f5f9;
+    --on-surface-sink: #0f172a;
+    --border-surface-sink: #cbd5e1;
+
+    /* Default palette = base surface */
+    --primary: var(--surface-base-primary);
+    --on-primary: var(--surface-base-on-primary);
+    --secondary: var(--surface-base-secondary);
+    --on-secondary: var(--surface-base-on-secondary);
+    --accent: var(--surface-base-accent);
+    --on-accent: var(--surface-base-on-accent);
+    --special: var(--surface-base-special);
+    --on-special: var(--surface-base-on-special);
+    --down: var(--surface-base-down);
+    --on-down: var(--surface-base-on-down);
+    --up: var(--surface-base-up);
+    --on-up: var(--surface-base-on-up);
+    --success: var(--surface-base-success);
+    --warning: var(--surface-base-warning);
+    --danger: var(--surface-base-danger);
+    --info: var(--surface-base-info);
+    --muted: #64748b;
+    --on-muted: #f8fafc;
+    --tertiary: #f1f5f9;
+    --on-tertiary: #0f172a;
+
+    --bg-default: var(--surface-base);
+    --text-default: var(--on-surface-base);
+    --on-success: #ffffff;
+    --on-warning: #1c1917;
+    --on-danger: #ffffff;
+    --on-info: #ffffff;
+  }
+
+  .dark {
+    /* Base surface */
+    --surface-base-primary: #38bdf8;
+    --surface-base-on-primary: #000000;
+    --surface-base-secondary: #d97706;
+    --surface-base-on-secondary: #ffffff;
+    --surface-base-accent: #38bdf8;
+    --surface-base-on-accent: #000000;
+    --surface-base-special: #94a3b8;
+    --surface-base-on-special: #000000;
+    --surface-base-down: #ef4444;
+    --surface-base-on-down: #ffffff;
+    --surface-base-up: #22c55e;
+    --surface-base-on-up: #ffffff;
+    --surface-base-success: #22c55e;
+    --surface-base-warning: #f59e0b;
+    --surface-base-danger: #ef4444;
+    --surface-base-info: #3b82f6;
+
+    /* Elevated surface (same defaults) */
+    --surface-elevated-primary: #38bdf8;
+    --surface-elevated-on-primary: #000000;
+    --surface-elevated-secondary: #d97706;
+    --surface-elevated-on-secondary: #ffffff;
+    --surface-elevated-accent: #38bdf8;
+    --surface-elevated-on-accent: #000000;
+    --surface-elevated-special: #94a3b8;
+    --surface-elevated-on-special: #000000;
+    --surface-elevated-down: #ef4444;
+    --surface-elevated-on-down: #ffffff;
+    --surface-elevated-up: #22c55e;
+    --surface-elevated-on-up: #ffffff;
+    --surface-elevated-success: #22c55e;
+    --surface-elevated-warning: #f59e0b;
+    --surface-elevated-danger: #ef4444;
+    --surface-elevated-info: #3b82f6;
+
+    /* Sink surface (same defaults) */
+    --surface-sink-primary: #38bdf8;
+    --surface-sink-on-primary: #000000;
+    --surface-sink-secondary: #d97706;
+    --surface-sink-on-secondary: #ffffff;
+    --surface-sink-accent: #38bdf8;
+    --surface-sink-on-accent: #000000;
+    --surface-sink-special: #94a3b8;
+    --surface-sink-on-special: #000000;
+    --surface-sink-down: #ef4444;
+    --surface-sink-on-down: #ffffff;
+    --surface-sink-up: #22c55e;
+    --surface-sink-on-up: #ffffff;
+    --surface-sink-success: #22c55e;
+    --surface-sink-warning: #f59e0b;
+    --surface-sink-danger: #ef4444;
+    --surface-sink-info: #3b82f6;
+
+    /* Surface structural vars (based on brief) */
+    --surface-base: #000000;
+    --on-surface-base: #fafafa;
+    --border-surface-base: #27272a;
+    --surface-elevated: #18181b;
+    --on-surface-elevated: #ffffff;
+    --border-surface-elevated: #3f3f46;
+    --surface-sink: #0a0a0a;
+    --on-surface-sink: #a1a1aa;
+    --border-surface-sink: #18181b;
+
+    /* Default palette = base surface */
+    --primary: var(--surface-base-primary);
+    --on-primary: var(--surface-base-on-primary);
+    --secondary: var(--surface-base-secondary);
+    --on-secondary: var(--surface-base-on-secondary);
+    --accent: var(--surface-base-accent);
+    --on-accent: var(--surface-base-on-accent);
+    --special: var(--surface-base-special);
+    --on-special: var(--surface-base-on-special);
+    --down: var(--surface-base-down);
+    --on-down: var(--surface-base-on-down);
+    --up: var(--surface-base-up);
+    --on-up: var(--surface-base-on-up);
+    --success: var(--surface-base-success);
+    --warning: var(--surface-base-warning);
+    --danger: var(--surface-base-danger);
+    --info: var(--surface-base-info);
+    --muted: #71717a;
+    --on-muted: #18181b;
+    --tertiary: #18181b;
+    --on-tertiary: #e4e4e7;
+
+    --bg-default: var(--surface-base);
+    --text-default: var(--on-surface-base);
+    --on-success: #ffffff;
+    --on-warning: #000000;
+    --on-danger: #ffffff;
+    --on-info: #ffffff;
+  }
+
+  /* =============================================
+     Surface Class Scopes — override palette per surface
+     ============================================= */
+  .surface-elevated {
+    --primary: var(--surface-elevated-primary);
+    --on-primary: var(--surface-elevated-on-primary);
+    --secondary: var(--surface-elevated-secondary);
+    --on-secondary: var(--surface-elevated-on-secondary);
+    --accent: var(--surface-elevated-accent);
+    --on-accent: var(--surface-elevated-on-accent);
+    --special: var(--surface-elevated-special);
+    --on-special: var(--surface-elevated-on-special);
+    --down: var(--surface-elevated-down);
+    --on-down: var(--surface-elevated-on-down);
+    --up: var(--surface-elevated-up);
+    --on-up: var(--surface-elevated-on-up);
+    --success: var(--surface-elevated-success);
+    --warning: var(--surface-elevated-warning);
+    --danger: var(--surface-elevated-danger);
+    --info: var(--surface-elevated-info);
+  }
+
+  .surface-sink {
+    --primary: var(--surface-sink-primary);
+    --on-primary: var(--surface-sink-on-primary);
+    --secondary: var(--surface-sink-secondary);
+    --on-secondary: var(--surface-sink-on-secondary);
+    --accent: var(--surface-sink-accent);
+    --on-accent: var(--surface-sink-on-accent);
+    --special: var(--surface-sink-special);
+    --on-special: var(--surface-sink-on-special);
+    --down: var(--surface-sink-down);
+    --on-down: var(--surface-sink-on-down);
+    --up: var(--surface-sink-up);
+    --on-up: var(--surface-sink-on-up);
+    --success: var(--surface-sink-success);
+    --warning: var(--surface-sink-warning);
+    --danger: var(--surface-sink-danger);
+    --info: var(--surface-sink-info);
+  }
+
+  body {
+    background-color: var(--bg-default);
+    color: var(--text-default);
+    @apply transition-colors duration-300 antialiased text-base;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary font-bold transition-colors duration-300;
+  }
+
+  h1 { @apply text-3xl mb-6; }
+  h2 { @apply text-2xl mb-4; }
+  h3 { @apply text-xl mb-3; }
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

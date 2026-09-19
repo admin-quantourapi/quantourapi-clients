@@ -1,0 +1,8 @@
+{
+  "name": "@quantour/ui",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    "./theme.css": "./theme.css"
+  }
+}

@@ -1,0 +1,153 @@
+@import "tailwindcss";
+@import "./theme.css";
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  #sidebar-container:not(.force-expand) h1, 
+  #sidebar-container:not(.force-expand) h2 { display: none !important; }
+  #sidebar-container:not(.force-expand) .section-chevron { display: none !important; }
+  #sidebar-container:not(.force-expand) a > span:nth-child(2) { display: none !important; }
+  #sidebar-container:not(.force-expand) a > div > span:nth-child(2) { display: none !important; }
+  #sidebar-container:not(.force-expand) a > div { gap: 0 !important; }
+  #sidebar-container:not(.force-expand) a { justify-content: center !important; padding-left: 0 !important; padding-right: 0 !important; }
+  #sidebar-container:not(.force-expand) .user-controls { display: none !important; }
+  #sidebar-container:not(.force-expand) .macro-expanded { display: none !important; }
+}
+
+@media (min-width: 1280px) {
+  #sidebar-container:not(.force-collapse) .macro-collapsed { display: none !important; }
+}
+
+@media (min-width: 768px) {
+  #sidebar-container.force-collapse h1, 
+  #sidebar-container.force-collapse h2 { display: none !important; }
+  #sidebar-container.force-collapse .section-chevron { display: none !important; }
+  #sidebar-container.force-collapse a > span:nth-child(2) { display: none !important; }
+  #sidebar-container.force-collapse a > div > span:nth-child(2) { display: none !important; }
+  #sidebar-container.force-collapse a > div { gap: 0 !important; }
+  #sidebar-container.force-collapse a { justify-content: center !important; padding-left: 0 !important; padding-right: 0 !important; }
+  #sidebar-container.force-collapse .user-controls { display: none !important; }
+  #sidebar-container.force-collapse .macro-expanded { display: none !important; }
+  
+  #sidebar-container.force-expand .macro-collapsed { display: none !important; }
+}
+
+@media (max-width: 767px) {
+  .macro-collapsed { display: none !important; }
+}
+
+.jer-editor-container {
+  width: 100% !important;
+}
+
+/* =============================================
+   Metro UI Quantitative Design System Utilities
+   ============================================= */
+
+/* Enforce Metro / Sharp Bloomberg-style 0px border-radius across all Tailwind rounded utility classes in markup */
+[class*="rounded-2xl"],
+[class*="rounded-xl"],
+[class*="rounded-lg"],
+[class*="rounded-md"],
+[class*="rounded-sm"],
+[class*="rounded-3xl"] {
+  border-radius: 0px !important;
+}
+
+/* Metro Control Heights */
+.h-filter-md {
+  height: 2.25rem !important; /* 36px standard Metro control height */
+}
+
+/* Metro Containers & Cards */
+.metro-tile {
+  border-radius: 0px !important;
+  border: 1px solid var(--border-surface-elevated);
+  background-color: var(--surface-elevated);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.metro-tile:hover {
+  border-color: var(--color-accent);
+}
+
+/* Metro Status Badges & Blocks */
+.metro-badge-buy {
+  background-color: #059669 !important;
+  color: #ffffff !important;
+  font-family: monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0px !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.metro-badge-sell {
+  background-color: #dc2626 !important;
+  color: #ffffff !important;
+  font-family: monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0px !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.metro-badge-cautious {
+  background-color: #d97706 !important;
+  color: #000000 !important;
+  font-family: monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0px !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Metro Pivot Tabs */
+.metro-pivot-tab {
+  font-family: monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  border-radius: 0px !important;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.metro-pivot-tab.active {
+  border-bottom-color: var(--color-accent);
+  color: var(--color-accent);
+  background-color: var(--surface-sink);
+}
+
+/* Metro Data Grid / Table Rows */
+.metro-table-row {
+  border-bottom: 1px solid var(--border-surface-base);
+  font-variant-numeric: tabular-nums;
+  transition: background-color 0.1s ease;
+}
+
+.metro-table-row:hover {
+  background-color: var(--surface-sink);
+}
+
+/* Metro Input Controls */
+.metro-input {
+  border-radius: 0px !important;
+  border: 1px solid var(--border-surface-elevated);
+  background-color: var(--surface-sink);
+  color: var(--on-surface-base);
+  font-family: monospace;
+  padding: 0.5rem 0.75rem;
+}
+
+.metro-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+

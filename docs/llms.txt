@@ -1,0 +1,20 @@
+# Quantour Clients
+
+> Self-hosted client suite for the Quantour signal platform: dashboard,
+> Telegram bot, and local API proxy under one API key. This file indexes the
+> documentation for LLM consumption.
+
+Docs: https://github.com/admin-quantourapi/quantourapi-clients/tree/main/docs
+
+## Pages
+
+- [Configuration](docs/configuration.md): every env var per app, defaults, and when to touch them
+- [Architecture](docs/architecture.md): components, ports, WebSocket protocol versioning, identity model
+- [Telegram bot](docs/telegram.md): bot setup, /link key flow, command surface, multi-chat model
+- [Operations](docs/operations.md): build-before-start, upgrades, SQLite backups, health checks
+- [Troubleshooting](docs/troubleshooting.md): invalid key, 409 conflicts, silent bot, WS version mismatch
+
+## Install (agent wizard)
+
+For automated installs, follow https://quantourapi.com/QUANTOUR_AGENT.md
+instead of these pages — it is the canonical agent-native guide.

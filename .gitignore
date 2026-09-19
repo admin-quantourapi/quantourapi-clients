@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+.react-router/
+*.log
+local.db*
+local.universe.json
+*.sqlite
+*.sqlite-*
+.env
+.env.*
+!.env.example

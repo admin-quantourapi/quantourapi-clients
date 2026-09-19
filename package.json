@@ -1,0 +1,18 @@
+{
+  "name": "quantour-clients",
+  "version": "0.1.0",
+  "description": "Open-source Quantour client suite — self-hostable dashboard, Telegram bot, and client API proxy powered by the Quantour signal engine.",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "bun run start.ts",
+    "bot": "bun run apps/bot/src/index.ts",
+    "client-api": "bun run apps/client_api/src/index.ts",
+    "dashboard": "bun run --cwd apps/dashboard dev",
+    "build": "bun run --cwd apps/dashboard typegen && bun run --cwd apps/dashboard build"
+  }
+}

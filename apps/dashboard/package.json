@@ -1,0 +1,44 @@
+{
+  "name": "@quantour/dashboard",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "typegen": "react-router typegen",
+    "start": "react-router-serve ./build/server/index.js"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.27.20",
+    "@react-router/node": "^8.2.0",
+    "@react-router/serve": "^8.2.0",
+    "@quantour/shared-algo": "workspace:*",
+    "@tailwindcss/vite": "^4.3.3",
+    "@xyflow/react": "^12.11.2",
+    "better-auth": "^1.6.23",
+    "canvas": "^3.2.3",
+    "chart.js": "^4.5.1",
+    "chartjs-plugin-zoom": "^2.2.0",
+    "cookie": "2.0.1",
+    "dagre": "^0.8.5",
+    "isbot": "^5.2.1",
+    "jiti": "^2.7.0",
+    "json-edit-react": "^1.30.2",
+    "react": "^19.2.7",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.7",
+    "react-router": "^8.2.0",
+    "tailwindcss": "^4.3.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^8.2.0",
+    "@types/cookie": "1.0.0",
+    "@types/dagre": "^0.7.54",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "vite": "^8.1.5",
+    "vite-tsconfig-paths": "^6.1.1"
+  }
+}

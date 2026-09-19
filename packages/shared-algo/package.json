@@ -1,0 +1,9 @@
+{
+  "name": "@quantour/shared-algo",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "zod": "^4.4.3"
+  }
+}

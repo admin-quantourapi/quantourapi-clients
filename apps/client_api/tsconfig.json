@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "paths": {
+      "~/*": ["./src/*"],
+      "@quantour/shared-algo": ["../../../packages/shared-algo/src/index.ts"],
+      "@quantour/shared-algo/*": ["../../../packages/shared-algo/*"]
+    },
+    "moduleResolution": "bundler",
+    "types": ["bun-types"],
+    "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
